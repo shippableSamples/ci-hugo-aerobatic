@@ -1,0 +1,9 @@
+{
+  "scripts": {
+     "build": "hugo --theme=hemingway2 --baseURL 'https://__baseurl__'",
+     "deploy": "npm run build && aero deploy -d public"
+  },
+  "devDependencies": {
+      "aerobatic-cli": "1.0.35"
+  }
+}
