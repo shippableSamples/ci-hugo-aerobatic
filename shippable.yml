@@ -6,8 +6,10 @@ env:
 build:
   cache: true
     - node_modules
-    
+
   ci:
+    - wget https://github.com/spf13/hugo/releases/download/v0.18/hugo_0.18-64bit.deb
+    - sudo dpkg -i hugo*.deb
     - git clone https://github.com/beli3ver/hemingway2.git themes/hemingway2
     - npm install
 
