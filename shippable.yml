@@ -6,7 +6,7 @@ env:
 build:
   pre_ci_boot:
     image_name: aerobatic/hugo
-    image_tag: tip
+    image_tag: latest
     pull: true
     options: "-e HOME=/root"
 
