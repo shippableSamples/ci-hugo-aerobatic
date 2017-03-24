@@ -1,6 +1,6 @@
 {
   "scripts": {
-     "build": "hugo --theme=hemingway2 --baseURL 'https://__baseurl__'",
+     "build": "hugo --theme=hemingway2 --baseURL 'https://__baseurl__' --buildDrafts",
      "deploy": "npm run build && aero deploy -d public"
   },
   "devDependencies": {
