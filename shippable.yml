@@ -8,14 +8,15 @@ env:
 
 build:
   cache: true
+
   cache_dir_list:
     - node_modules
+    
   ci:
     - wget https://github.com/spf13/hugo/releases/download/v0.18/hugo_0.18-64bit.deb
     - sudo dpkg -i hugo*.deb
-    - npm install -g aerobatic-cli
     - git clone https://github.com/beli3ver/hemingway2.git themes/hemingway2
-    - hugo --theme=hemingway2 --baseURL https://__baseurl__ --buildDrafts
+    - shippable_retry sudo npm install
 
   on_success:
-    - aero deploy -d public
+    - npm run deploy
