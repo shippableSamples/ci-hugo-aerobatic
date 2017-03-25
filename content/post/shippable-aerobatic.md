@@ -48,7 +48,7 @@ In the root directory of your site, go ahead and create a `package.json` file li
 ~~~json
 {
   "scripts": {
-     "build": "hugo --theme=hemingway2 --baseURL 'https://__baseurl__' --buildDrafts",
+     "build": "hugo --theme=hemingway2 --baseURL https://!!baseurl!! --buildDrafts",
      "deploy": "npm run build && aero deploy -d public"
   },
   "devDependencies": {
