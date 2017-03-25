@@ -145,5 +145,7 @@ Then, log in to the Aerobatic [dashboard](https://dashboard.aerobatic.com) to se
 At this point, with your build process set up, you can now author new blog posts directly in GitHub, make your commit, everything will be built, and a new version of your site will be deployed immediately.
 
 
-And that’s it. Happy Coding! p.s. The code for this tutorial can be found at https://github.com/Dundonian/shippable
+And that’s it. Happy Coding! 
+
+p.s. The code for this tutorial can be found at https://github.com/Dundonian/shippable
 
