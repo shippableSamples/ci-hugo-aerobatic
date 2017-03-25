@@ -48,11 +48,11 @@ In the root directory of your site, go ahead and create a `package.json` file li
 ~~~json
 {
   "scripts": {
-     "build": "hugo --theme=hemingway2 --baseURL 'https://!!baseurl!!' --buildDrafts",
+     "build": "hugo --theme=hemingway2 --baseURL 'https://__baseurl__' --buildDrafts",
      "deploy": "npm run build && aero deploy -d public"
   },
   "devDependencies": {
-      "aerobatic-cli": "1.0.35"
+      "aerobatic-cli": "*"
   }
 }
 ~~~
@@ -114,6 +114,8 @@ build:
     - npm run deploy
 ~~~
 
+As you can see in our YAML file, we're using the shippable `cache_dir_list` tag to cache our `node_modules` directory so the aerobatic-cli does not have to be installed from scratch with each build.
+
 Once you push this new file to GitHub, your site will be automatically built and deployed by Shippable:
 
 <img src="/images/site-live.png" alt="Shippable CI Build Log">
@@ -135,9 +137,11 @@ plugins:
 
 ~~~
 
-Then, log in to the Aerobatic [dashboard](https://dashboard.aerobatic.com) to set the `SITE_PASSWORD` environment variable. As you can see, for this demo, our password value is **aeroship**.
+Then, create an environment variable called `SITE_PASSWORD`. As you can see, for this demo, our password value is **aeroship**.
 
-<img src="/images/aero-env-var.png" alt="Aerobatic Environment Variable Screenshot">
+~~~bash
+[$] aero env -n SITE_PASSWORD -v aeroship
+~~~
 
 
 ## Conclusion
