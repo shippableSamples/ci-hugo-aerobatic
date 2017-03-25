@@ -3,4 +3,7 @@ deploy:
   ignore: []
   directory: .
 plugins:
+  - name: password-protect
+    options:
+      password: $SITE_PASSWORD
   - name: webpage

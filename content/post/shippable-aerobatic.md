@@ -6,3 +6,5 @@ draft = true
 +++
 
 This is a blog post about using Shippable to build a Hugo static site and deploy it to Aerobatic.
+
+The site's password is `aeroship`.
