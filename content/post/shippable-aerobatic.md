@@ -102,7 +102,7 @@ build:
   cache: true
 
   cache_dir_list:
-    - node_modules
+    - $SHIPPABLE_BUILD_DIR/node_modules
     
   ci:
     - wget https://github.com/spf13/hugo/releases/download/v0.18/hugo_0.18-64bit.deb
