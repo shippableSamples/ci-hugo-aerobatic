@@ -154,3 +154,6 @@ And that’s it. Happy Coding!
 
 p.s. The code for this tutorial can be found at https://github.com/Dundonian/shippable
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+
