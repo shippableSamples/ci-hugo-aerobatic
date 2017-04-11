@@ -120,10 +120,7 @@ Once you push this new file to GitHub, your site will be automatically built and
 
 <img src="/images/site-live.png" alt="Shippable CI Build Log">
 
-Grab the address for your Aerobatic site from your Shippable console or via the aero CLI and view your newly deployed site in your browser:
-~~~bash
-[$] aero info
-~~~
+Grab the address for your Aerobatic site from your Shippable console or via the aero CLI (`aero info`) and view your newly deployed site in your browser.
 
 To see how easy it is to make changes to your site, edit your draft post in the content/post directory and commit your changes to GitHub. The build and deploy process will repeat and your site will be updated on Aerobatic!
 
