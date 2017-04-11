@@ -17,7 +17,7 @@ In this tutorial, we'll show you how to use Shippable to build a [Hugo](https://
 
 ## Create New Hugo Site
 
-We'll assume you've already [installed Hugo](https://gohugo.io/overview/quickstart/). Also, Hugo has an extensive [themes gallery](http://themes.gohugo.io/). In the example below, we're using a theme called hemingway2, but you can, of course, use any theme.
+Once you've [installed Hugo](https://gohugo.io/overview/quickstart/), you can create your new Hugo site and even serve it locally. Also, Hugo has an extensive [themes gallery](http://themes.gohugo.io/). In the example below, we're using a theme called hemingway2, but you can, of course, use any theme.
 
 ~~~bash
 [$] hugo new site shippable
@@ -29,7 +29,7 @@ We'll assume you've already [installed Hugo](https://gohugo.io/overview/quicksta
 
 ## Create Aerobatic Site
 
-At this point, we could now simply create and deploy the site to Aerobatic like so;
+At this point, we could now simply create and deploy the site to Aerobatic for hosting like so;
 
 ~~~bash
 [$] hugo
@@ -81,7 +81,7 @@ Next, create a new repository in GitHub at https://github.com/new. Once the repo
 
 We'll assume you have a Shippable account and you've linked it to your GitHub account. Click the **Enable project** link and select your newly created Hugo site.
 
-Once you’ve done that, you’ll then also need to add the `AEROBATIC_API_KEY` to Shippable as an environment variable. This is a one-time step. You can get your Aerobatic API key by running `aero apikey` from the command line in the root of your Hugo site.
+Once you’ve done that, you’ll then also need to add the `AEROBATIC_API_KEY` to Shippable as an encrypted environment variable. This is a one-time step. You can get your Aerobatic API key by running `aero apikey` from the command line in the root of your Hugo site and [then encrypt it](http://docs.shippable.com/ci/advancedOptions/environmentVariables/#secure-variables) in your Shippable project settings. You'll include the encrypted variable in your shippable.yml config in the next section.
 
 <img src="/images/env-var.png" alt="Shippable Environment Variable">
 
@@ -96,7 +96,7 @@ node_js:
   - 6.9.4
 
 env:
-  - secure: <a long string of values goes here>
+  - secure: <your encrypted variable from above goes here>
 
 build:
   cache: true
@@ -119,6 +119,14 @@ As you can see in our YAML file, we're using the shippable `cache_dir_list` tag 
 Once you push this new file to GitHub, your site will be automatically built and deployed by Shippable:
 
 <img src="/images/site-live.png" alt="Shippable CI Build Log">
+
+Grab the address for your Aerobatic site from your Shippable console or via the aero CLI and view your newly deployed site in your browser:
+~~~bash
+[$] aero info
+~~~
+
+To see how easy it is to make changes to your site, edit your draft post in the content/post directory and commit your changes to GitHub. The build and deploy process will repeat and your site will be updated on Aerobatic!
+
 
 ## Option - Password Protection
 
