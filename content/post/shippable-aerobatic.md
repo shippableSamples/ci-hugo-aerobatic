@@ -9,7 +9,7 @@ draft = false
 
 [Aerobatic](https://www.aerobatic.com/) is a web publishing service built specifically for static generators and modern web apps. Using the Aerobatic Command Line Interface (CLI), front-end developers can deploy their sites to the Aerobatic Global Content Delivery Network (CDN) in a matter of seconds.
 
-The workflow becomes even more powerful and convenient when Aerobatic is combined with a Continuous Integration (CI) tool such as [Shippable](https://twitter.com/jasongowans). In this scenario, developers can host their static generator site on any version control service, such as GitHub, Bitbucket, or Gitlab, and using Shippable, build the site, and then deploy to Aerobatic.
+The workflow becomes even more powerful and convenient when Aerobatic is combined with a Continuous Integration (CI) tool such as [Shippable](https://www.shippable.com). In this scenario, developers can host their static generator site on any version control service, such as GitHub, Bitbucket, or Gitlab, and using Shippable, build the site, and then deploy to Aerobatic.
 
 The advantage of this approach is that you no longer need to build your site on your local machine. In fact, once set up, you can then simply edit your site directly in GitHub using markdown, and the combination of Shippable and Aerobatic will take care of the rest such that a new version of your site will be live in less than a minute.
 
